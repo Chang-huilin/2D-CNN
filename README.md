@@ -29,8 +29,12 @@ Online monitoring system of black tea withering process based on image
 - **CBAM 分类模型**：  
   在基础卷积网络中嵌入了 CBAM 模块（通道注意力和空间注意力机制），增强了模型对重要特征的关注能力。
 
-- **预训练 VGG16 模型**：  
-  利用在 ImageNet 上预训练的 VGG16 模型，并替换最后的全连接层，使其适用于当前的分类任务。  
+- **预训练 VGG16/19 模型**：  
+  利用在 ImageNet 上预训练的 VGG16/19 模型，并替换最后的全连接层，使其适用于当前的分类任务。  
+  迁移学习策略可以显著提高小数据集上的分类效果。
+
+- **预训练 ResNet50 模型**：  
+  利用在 ImageNet 上预训练的 ResNet50 模型，并替换最后的全连接层，使其适用于当前的分类任务。  
   迁移学习策略可以显著提高小数据集上的分类效果。
 
 ---
@@ -55,9 +59,16 @@ Online monitoring system of black tea withering process based on image
 
 - **训练/验证曲线**：  
   记录每个 epoch 的训练和验证损失、准确率，并利用 matplotlib 绘制曲线，直观观察模型的收敛情况和是否存在过拟合现象。
+  ![alt text](image.png)
 
 - **混淆矩阵 (Confusion Matrix)**：  
   在测试阶段收集所有预测结果和真实标签，利用 scikit-learn 计算混淆矩阵并可视化，帮助分析模型在各个类别上的分类效果。
+  ![alt text](95.46%.png)
+
+- **Grad_CAM**：  
+  利用 Grad-CAM 技术生成热力图，直观展示模型在图像分类任务中关注的区域。通过对卷积层输出的梯度进行反向传播，计算每个像素的重要性，并将其叠加在原始图像上，帮助理解模型的决策过程。
+
+  ![alt text](output93.86.png)
 
 ---
 
