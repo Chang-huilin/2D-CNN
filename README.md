@@ -66,7 +66,7 @@ Online monitoring system of black tea withering process based on image
 1. **安装依赖**
 
    请确保安装了以下主要依赖：
-   
+
    - Python 3.x
    - PyTorch
    - torchvision
@@ -75,5 +75,6 @@ Online monitoring system of black tea withering process based on image
    - Pillow
 
    安装示例：
-   ```bash
+
+```bash
    pip install torch torchvision scikit-learn matplotlib pillow
