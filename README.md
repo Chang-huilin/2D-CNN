@@ -59,10 +59,12 @@ Online monitoring system of black tea withering process based on image
 
 - **训练/验证曲线**：  
   记录每个 epoch 的训练和验证损失、准确率，并利用 matplotlib 绘制曲线，直观观察模型的收敛情况和是否存在过拟合现象。
+  
   ![alt text](image.png)
 
 - **混淆矩阵 (Confusion Matrix)**：  
   在测试阶段收集所有预测结果和真实标签，利用 scikit-learn 计算混淆矩阵并可视化，帮助分析模型在各个类别上的分类效果。
+
   ![alt text](95.46%.png)
 
 - **Grad_CAM**：  
